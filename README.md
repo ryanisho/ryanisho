@@ -8,8 +8,6 @@ I'm a software developer, passionate about coding and creating innovative soluti
 
 ![Your GitHub stats](https://repo-stats-7j3e.vercel.app/api?username=ryanisho&show_icons=true&theme=tokyonight)
 
-![Top Languages](https://repo-stats-7j3e.vercel.app/api/top-langs/?username=ryanisho&theme=tokyonight)
-
 
 ## 🔧 Technologies & Tools:
 
