@@ -392,7 +392,7 @@ body,input,textarea,select,button{
 .a1 .custom-1keny4{
     display:block
 }
-.a1 .custom-esds9a{
+.a1 .linebarContainer{
     align-content:center;
     align-items:center;
     display:flex;
@@ -406,7 +406,7 @@ body,input,textarea,select,button{
     position:relative;
     width:1200px
 }
-.a1 .custom-xlw5q4{
+.a1 .footerLinebar{
     flex:none;
     height:1px;
     overflow:hidden;
@@ -470,16 +470,16 @@ body,input,textarea,select,button{
     z-index:1
 }
 @supports (background:-webkit-named-image(i)) and (not (font-palette:dark)){
-    .a1 .custom-esds9a,.a1 .centerFooter,.a1 .custom-15h0mwk{
+    .a1 .linebarContainer,.a1 .centerFooter,.a1 .custom-15h0mwk{
         gap:0
     }
-    .a1 .custom-esds9a>*{
+    .a1 .linebarContainer>*{
         margin:8px 0
     }
-    .a1 .custom-esds9a>:first-child{
+    .a1 .linebarContainer>:first-child{
         margin-top:0
     }
-    .a1 .custom-esds9a>:last-child{
+    .a1 .linebarContainer>:last-child{
         margin-bottom:0
     }
     .a1 .centerFooter>*{
@@ -618,10 +618,10 @@ body,input,textarea,select,button{
         margin:0 2.5px
     }
 }
-.a1.custom-v-1j68zmg .custom-esds9a{
+.a1.custom-v-1j68zmg .linebarContainer{
     width:390px
 }
-.a1.custom-v-1j68zmg .custom-xlw5q4{
+.a1.custom-v-1j68zmg .footerLinebar{
     width:1200px
 }
 .a1.custom-v-1j68zmg .centerFooter{
