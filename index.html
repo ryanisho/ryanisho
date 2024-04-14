@@ -1,76 +1,302 @@
 <!DOCTYPE html>
-  <html lang="en">
-  <head>
-    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-    <meta name="viewport" content="width=device-width">
-    <title>Ryan Ho</title>
-    <meta name="description" content="Ryan is an undergraduate student at Cornell University, studying Computer Science. He is a Jersey-native who currently lives between Ithaca, NYC, and NJ.">
-    <link rel="stylesheet" type="text/css" href="style.css">
-  </head>
-    <body class="body">
-      <div id="main">
-        <div class="pg0 pg2 pg4 pg3 pg5 pg7" style = "display: contents">
-          <div class="body1" style = "min-height: 100%; width: auto;">
-          <!-- Footer Start -->
-          <div class="customContainer1">
-            <div class="a1 a2 a3" style="display: contents;">
-              <div class="linebarContainer" style="background-color: rgba(51, 136, 255, 0); width: auto;">
-                <!-- Line Bar footer -->
-                <div class="footerLinebar" style="background-color: rgb(232, 232, 232)"></div>
-                <div class="centerFooter">
-                <div class="footerCustom footerStyle">
-                  <p class="custom-text footerFont">Thanks for visiting :) </p>
-                </div>
-                <div class="custom-15h0mwk">
-                  <div class="custom-1wowv1u-container">
-                    <div style="display:contents">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" focusable="false" color="rgb(143, 143, 143)" >
-                        <g color="rgb(143, 143, 143)" weight="regular">
-                          <circle cx="128" cy="128" r="96" fill="none" stroke="rgb(143, 143, 143)" stroke-miterlimit="10" stroke-width="16"></circle>
-                          <line x1="32" y1="128" x2="224" y2="128" fill="none" stroke="rgb(143, 143, 143)" stroke-linecap="round" stroke-linejoin="round" stroke-width="16"></line>
-                          <ellipse cx="128" cy="128" rx="40" ry="93.42294" fill="none" stroke="rgb(143, 143, 143)" stroke-miterlimit="10" stroke-width="16"></ellipse>
-                        </g>
-                      </svg>
-                    </div>
-                  </div>
-                  <div class="footerStyle">
-                    <p class="custom-text footerFont">Currently NYC</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+<html lang="ja" class=" default focus-outline-hidden">
+
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>rho.</title>
+  <meta name="description" content="Computer Science student at Cornell University">
+
+  <!-- Load CSS file -->
+  <link rel="stylesheet" href="./assets/style.css">
+</head>
+
+<body>
+  <div id="Page" class="is-dark">
+
+    <!-- Background: Default white -->
+    <div id="Background">
+      <canvas width="2282" height="1524"></canvas>
+    </div>
+
+    <!-- Frame border -->
+    <div class="frame" id="Frame">
+      <div class="frame_line frame_line-left"></div>
+      <div class="frame_line frame_line-right"></div>
+      <div class="frame_line frame_line-top"></div>
+      <div class="frame_line frame_line-bottom"></div>
+    </div>
+
+    <!-- Color Selector -->
+    <div class="theme" id="Theme" x-data="">
+      <div class="theme_colors" @click="$store.app.toggleTheme()">
+        <div class="theme_btn" :class="{ &#39;is-selected&#39;: $store.app.theme === &#39;light&#39; }">
+          <div class="_box"></div>
+          <div class="_text">Light</div>
         </div>
-        <!-- Footer End -->
-        <div class="headerContainer">
-          <div class="headerBlock">
-            <div class="headerName indexText">
-              <p class="custom-text name">Ryan Ho</p>
-            </div>
-            <div class="headerLink indexText"><p class="custom-text headerFont"><a class="custom-text headerWrapper" href="./timeline">Timeline</a></p>
-            </div>
-           <!--  <div class="headerLink indexText"><p class="custom-text headerFont"><a class="custom-text headerWrapper" href="./portfolio">Portfolio</a></p>
-            </div> -->
-            <div class="headerLink indexText"><p class="custom-text headerFont"><a class="custom-text headerWrapper" href="./ryan_ho_resume.pdf">Resume</a></p>
-            </div>
-          </div>
-            <div class="custom-oi3qt5">
-              <div class="customText indexText"><p class="custom-text textWrapper" >Building fullstack software. Contributing to open source. Focused on DevOps and freelance, for now. Student at <a class="custom-text linkWrapper" href="https://www.engineering.cornell.edu/">Cornell Engineering</a></p>
-              </div>
-              <div class="customText indexText"><p class="custom-text textWrapper" >I spend time learning about new technologies. Currently on: AWS, Azure, and C++. I also support local businesses and communities through freelance, see more on Portfolio.</p>
-              </div>
-              <div class="customText indexText"><p class="custom-text textWrapper" >Jersey-native, self-taught engineer, Cornell undergrad, Z-Fellows finalist.</p>
-              </div>
-              <div class = "indexText">
-                <p class="custom-text textWrapper">
-                  <a class="custom-text linkWrapper" href="https://www.linkedin.com/in/ryanisho">LinkedIn</a> · 
-                  <a class="custom-text linkWrapper" href="https://www.instagram.com/ryanisho/">Instagram</a> · 
-                  <a class="custom-text linkWrapper" href="mailto:rh564@cornell.edu">E-mail</a>
-                </p>
-              </div>
-            </div>
-          </div>
+        <div class="theme_btn is-selected" :class="{ &#39;is-selected&#39;: $store.app.theme === &#39;dark&#39; }">
+          <div class="_box"></div>
+          <div class="_text">Dark</div>
         </div>
       </div>
-    </body>
-  </html>
+    </div>
+
+    <!-- Header/Top Text -->
+    <header class="siteHeader" id="SiteHeader">
+      <h1 class="siteHeader_title">ryan ho.</h1>
+      <p class="siteHeader_label">Computer Science student at Cornell University</p>
+      <nav class="siteHeader_nav" x-data="">
+        <ol>
+          <li :class="{ &#39;is-selected&#39;: $store.app.currentPath === &#39;/&#39; }" class="is-selected">
+            <div class="_dot">●</div><a class="_text" href="home/">home</a>
+          </li>
+          <li :class="{ &#39;is-selected&#39;: $store.app.currentPath === &#39;/projects/&#39; }" class="">
+            <div class="_dot">●</div><a class="_text" href="timeline/">timeline & projects</a>
+          </li>
+          <li class="">
+            <!-- stopPropogation() fixes redirect post opening link -->
+            <a onclick="event.stopPropagation();" target="_blank" href="resume.pdf">resume</a>
+          </li>
+          <!-- TODO: Insert freelance -->
+          <li :class="{ &#39;is-selected&#39;: $store.app.currentPath === &#39;/info/&#39; }" class="">
+            <div class="_dot">●</div><a class="_text" href="contact/">contact</a>
+          </li>
+        </ol>
+      </nav>
+    </header>
+
+    <!-- Footer for Current Time -->
+    <div id="footer">
+      <p>Loading...</p>
+    </div>
+
+    <!-- Body Content -->
+    <main class="content" id="Content" data-scroll="area">
+      <div class="content_inner" data-scroll="target" style="transform: translate3d(0px, 0px, 0px);">
+
+        <!-- Home Page -->
+        <section class="page" data-page="home" style="display: block; opacity: 1;">
+          <div class="page_content home">
+            <p class="home_aboutme">
+              <span>interested in fullstack application </span>
+              <span> design (web & mobile), generative-ai, </span>
+              <span>computer-vision algorithms, and </span>
+              <span>cloud computing. jersey-native, </span>
+              <span>raised in <a target='_blank' href="https://en.wikipedia.org/wiki/Zhoushan"
+                  style="text-decoration: underline;">zhoushan</a>, f1
+                enthusiast, </span>
+              <span>video-game and loud-music enjoyer.</span>
+            </p>
+            </p>
+          </div>
+        </section>
+
+        <!-- Timeline/Projects page; TODO: Update with links-->
+        <section class="page" data-page="timeline" style="display: none; opacity: 0;">
+          <div class="page_content project">
+            <div class="project_section">
+              <h2 class="project_heading">■ Timeline</h2>
+              <div class="project_list">
+                <a class="project_item text-btn" href="" target="_blank">
+                  <div class="project_title">cisco</div>
+                  <div class="project_info">Apr.24 / Software Engineer Intern at </div>
+                </a>
+                <a class="project_item text-btn" href="" target="_blank">
+                  <div class="project_title">z-fellows</div>
+                  <div class="project_info">May.23 / Finalist at</div>
+                </a>
+                <a class="project_item text-btn" href="https://imgur.com/7hNPOKh" target="_blank">
+                  <div class="project_title">boom</div>
+                  <div class="project_info">May.23 / Presenter at Cornell </div>
+                </a>
+                <a class="project_item text-btn" href="https://github.com/ryanisho/plantalysis" target="_blank">
+                  <div class="project_title">altum labs</div>
+                  <div class="project_info">Mar.23 / Software Development Intern at </div>
+                </a>
+                <a class="project_item text-btn" href="https://github.com/connorjchen/hope-health-van" target="_blank">
+                  <div class="project_title">okb hope health</div>
+                  <div class="project_info">Dec.22 / Software Engineer Intern at</div>
+                </a>
+                <a class="project_item text-btn" href="" target="_blank">
+                  <div class="project_title">big red hacks</div>
+                  <div class="project_info">Oct.22 / Best Accessibility at Cornell </div>
+                </a>
+                <a class="project_item text-btn" href="https://cornelldata.science/teams/de" target="_blank">
+                  <div class="project_title">cornell data science</div>
+                  <div class="project_info">Oct.22 / Data Engineer at </div>
+                </a>
+                <a class="project_item text-btn" href="https://github.com/ryanisho/densetsu" target="_blank">
+                  <div class="project_title">nj fbla slc</div>
+                  <div class="project_info">May.22 / 1st place at </div>
+                </a>
+                <a class="project_item text-btn" href="" target="_blank">
+                  <div class="project_title">faa tech center</div>
+                  <div class="project_info">Mar.21 / Intern at William J. Hughes </div>
+                </a>
+                <a class="project_item text-btn" href="https://njkeyclub.org/" target="_blank">
+                  <div class="project_title">nj key club</div>
+                  <div class="project_info">Mar.21 / District Webmaster for </div>
+                </a>
+                <a class="project_item text-btn"
+                  href="https://certificates.cs50.io/781da0a9-86a7-4f8f-979c-97387308abf1.pdf?size=letter"
+                  target="_blank">
+                  <div class="project_title">harvardX</div>
+                  <div class="project_info">Jul.20 / Completed CS50 from </div>
+                </a>
+              </div>
+            </div>
+            <!-- Projects -->
+            <div class="project_section">
+              <h2 class="project_heading">■ projects</h2>
+              <div class="project_list">
+                <a class="project_item text-btn" href="https://github.com/CornellDataScience/edge-ml" target="_blank">
+                  <div class="project_title">edgeml</div>
+                  <div class="project_info">Apr.24 / distributed, edge-computing</div>
+                </a>
+                <a class="project_item text-btn" href="https://github.com/ryanisho/got" target="_blank">
+                  <div class="project_title">got</div>
+                  <div class="project_info">Nov.23 / version-control in ocaml</div>
+                </a>
+                <a class="project_item text-btn" href="https://github.com/ryanisho/claim.ai" target="_blank">
+                  <div class="project_title">claim.ai</div>
+                  <div class="project_info">May.23 / computer-vision bill analysis</div>
+                </a><a class="project_item text-btn" href="https://github.com/mbulling/TrivAI-mobile" target="_blank">
+                  <div class="project_title">trivai</div>
+                  <div class="project_info">May.23 / mobile llm study app</div>
+                </a><a class="project_item text-btn" href="https://github.com/ryanisho/sakura" target="_blank">
+                  <div class="project_title">sakura</div>
+                  <div class="project_info">Oct.22 / llm developer assistant</div>
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- Contact -->
+        <section class="page" data-page="contact" style="display: none; opacity: 0;">
+          <div class="page_content info">
+            <div class="info_item info_item-2">
+              <div class="info_content">
+                <ul>
+                  <li><a class="text-btn" href="https://www.linkedin.com/in/ryanisho/" target="_blank"
+                      rel="noopener">LinkedIn
+                      ↗</a></li>
+                  <li><a class="text-btn" href="https://www.instagram.com/ryanisho/" target="_blank"
+                      rel="noopener">Instagram ↗</a></li>
+                  <li><a class="text-btn" href="https://github.com/ryanisho/" target="_blank" rel="noopener">GitHub
+                      ↗</a></li>
+                  <li><a class="text-btn"
+                      href="https://tracker.gg/valorant/profile/riot/superstegasaurus%23ez4u/overview?season=aca29595-40e4-01f5-3f35-b1b3d304c96e"
+                      target="_blank" rel="noopener">VALORANT Tracker ↗</a></li>
+                </ul>
+              </div>
+            </div>
+            <div class="info_item info_item-3">
+              <div class="info_content">
+                <ul>
+                  <li><span class="is-light">Email<br></span><span>rh564@cornell.edu</span></li>
+                  <li><span class="is-light">Line<br></span><span>+1 609 553 9005</span></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <!-- TODO: Freelance -->
+        <section class="page" data-page="freelance" style="display: none; opacity: 0;">
+          <div class="page_content freelance">
+            <div class="freelance_list">
+              <div class="freelance_item">
+                <div class="freelance_q">
+                  <h2>interested in professional-grade personal or enterprise websites?</h2>
+                </div>
+                <div class="freelance_a">
+                  <p>open to freelance work/requests. contact thru email <a href="mailto:rh564@cornell.edi">here</a></p>
+                </div>
+              </div>
+              <div class="freelance_item">
+                <div class="freelance_q">
+                  <h2>tech stack? static/dynamic sites?</h2>
+                </div>
+                <div class="freelance_a">
+                  <p>js/ts (react, express, node, etc.) or python-based (flask, django, jinja, etc.). site-type depends
+                    on use case.</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+    </main>
+  </div>
+
+  <!-- Import JS File -->
+  <script src="./assets/main.js"></script>
+</body>
+
+
+<!-- Custom navItem/page display function -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const navItems = document.querySelectorAll('.siteHeader_nav li');
+    const pages = document.querySelectorAll('.page');
+
+    navItems.forEach(item => {
+      item.addEventListener('click', function () {
+        let targetPage = this.querySelector('a').getAttribute('href').split('/').slice(-2, -1)[0];
+
+        navItems.forEach(nav => {
+          nav.classList.remove('is-selected');
+          if (nav.querySelector('a').getAttribute('href').includes(targetPage)) {
+            nav.classList.add('is-selected');
+          }
+        });
+        pages.forEach(page => {
+          if (page.getAttribute('data-page') === targetPage) {
+            page.style.display = 'block';
+            page.style.opacity = 1;
+          } else {
+            page.style.display = 'none';
+            page.style.opacity = 0;
+          }
+        });
+      });
+    });
+  });
+</script>
+
+<!-- Current time function -->
+<script>
+  function displayCurrentTime() {
+    var footerElement = document.getElementById('footer');
+    var pElement = footerElement.querySelector('p');
+
+    setInterval(function () {
+      var now = new Date();
+
+      // Convert to EST
+      var estOffset = -5.0;
+      var utc = now.getTime() + (now.getTimezoneOffset() * 60000);
+      var est = new Date(utc + (3600000 * estOffset));
+
+      var hours = est.getHours() + 1; // +1 DST
+      var period = hours >= 12 ? 'PM' : 'AM';
+
+      hours = hours % 12;
+      hours = hours ? hours : 12;
+      hours = hours.toString().padStart(2, '0');
+
+      var minutes = est.getMinutes().toString().padStart(2, '0');
+      var seconds = est.getSeconds().toString().padStart(2, '0');
+
+      var currentTime = hours + ':' + minutes + ':' + seconds + ' ' + period + ' EST';
+      pElement.textContent = '© 2024 Ryan Ho - Current Time: ' + currentTime;
+    }, 1000);
+  }
+
+  // Call the function when the page loads
+  window.onload = displayCurrentTime;
+</script>
+
+</html>
