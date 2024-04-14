@@ -48,18 +48,18 @@
       <nav class="siteHeader_nav" x-data="">
         <ol>
           <li :class="{ &#39;is-selected&#39;: $store.app.currentPath === &#39;/&#39; }" class="is-selected">
-            <div class="_dot">●</div><a class="_text" href="home/">home</a>
+            <div class="_dot">●</div><a class="_text" id="home" href="/">home</a>
           </li>
           <li :class="{ &#39;is-selected&#39;: $store.app.currentPath === &#39;/projects/&#39; }" class="">
-            <div class="_dot">●</div><a class="_text" href="timeline/">timeline & projects</a>
+            <div class="_dot">●</div><a class="_text" id="tp" href="/">timeline & projects</a>
           </li>
           <li class="">
             <!-- stopPropogation() fixes redirect post opening link -->
             <a onclick="event.stopPropagation();" target="_blank" href="resume.pdf">resume</a>
           </li>
           <!-- TODO: Insert freelance -->
-          <li :class="{ &#39;is-selected&#39;: $store.app.currentPath === &#39;/info/&#39; }" class="">
-            <div class="_dot">●</div><a class="_text" href="contact/">contact</a>
+          <li :class="{ &#39;is-selected&#39;: $store.app.currentPath === &#39;/contact/&#39; }" class="">
+            <div class="_dot">●</div><a class="_text" id="contact" href="/">contact</a>
           </li>
         </ol>
       </nav>
@@ -75,7 +75,7 @@
       <div class="content_inner" data-scroll="target" style="transform: translate3d(0px, 0px, 0px);">
 
         <!-- Home Page -->
-        <section class="page" data-page="home" style="display: block; opacity: 1;">
+        <section class="page" id="home" style="display: block; opacity: 1;">
           <div class="page_content home">
             <p class="home_aboutme">
               <span>interested in fullstack application </span>
@@ -92,7 +92,7 @@
         </section>
 
         <!-- Timeline/Projects page; TODO: Update with links-->
-        <section class="page" data-page="timeline" style="display: none; opacity: 0;">
+        <section class="page" id="tp" style="display: none; opacity: 0;">
           <div class="page_content project">
             <div class="project_section">
               <h2 class="project_heading">■ Timeline</h2>
@@ -173,7 +173,7 @@
         </section>
 
         <!-- Contact -->
-        <section class="page" data-page="contact" style="display: none; opacity: 0;">
+        <section class="page" id="contact" style="display: none; opacity: 0;">
           <div class="page_content info">
             <div class="info_item info_item-2">
               <div class="info_content">
@@ -203,7 +203,7 @@
         </section>
 
         <!-- TODO: Freelance -->
-        <section class="page" data-page="freelance" style="display: none; opacity: 0;">
+        <section class="page" id="freelance" style="display: none; opacity: 0;">
           <div class="page_content freelance">
             <div class="freelance_list">
               <div class="freelance_item">
@@ -244,16 +244,16 @@
 
     navItems.forEach(item => {
       item.addEventListener('click', function () {
-        let targetPage = this.querySelector('a').getAttribute('href').split('/').slice(-2, -1)[0];
+        let targetPage = this.querySelector('a').getAttribute('id');
 
         navItems.forEach(nav => {
           nav.classList.remove('is-selected');
-          if (nav.querySelector('a').getAttribute('href').includes(targetPage)) {
+          if (nav.querySelector('a').getAttribute('id') === targetPage) {
             nav.classList.add('is-selected');
           }
         });
         pages.forEach(page => {
-          if (page.getAttribute('data-page') === targetPage) {
+          if (page.getAttribute('id') === targetPage) {
             page.style.display = 'block';
             page.style.opacity = 1;
           } else {
