@@ -11,7 +11,7 @@
 
 * {
     margin: 0;
-    padding: 0
+    padding: 0;
 }
 
 html {
@@ -23,7 +23,7 @@ html {
     -webkit-tap-highlight-color: rgba(0, 0, 0, 0)
 }
 
-default {
+.default {
     --c-bg: hsl(0, 0%, 5%);
     --c-text: hsl(0, 0%, 95%);
     --vw: 16.1px;
@@ -85,15 +85,15 @@ body {
 
 body {
     background-color: var(--c-bg);
-    font-family: "Neue Montreal";
-    font-weight: 600;
+    font-family: "Neue Montreal", "Japanese Fallout Font", sans-serif;
     font-size: var(--fs-text);
     font-feature-settings: "palt";
     -webkit-text-size-adjust: none;
     text-size-adjust: none;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    overscroll-behavior: none
+    overscroll-behavior: none;
+    font-weight: 200;
 }
 
 

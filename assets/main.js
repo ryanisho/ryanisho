@@ -14857,12 +14857,12 @@
                     this.isTransitioning = !0, this.currentPath && (this.hidePage(this.pages[this.currentPath]), await jo(.3)), this.scroll.reset(), this.isTransitioning = !1, this.showPage(this.pages[t]), this.currentPath = t
                 },
                 showPage(t) {
-                    t.style.display = "block", t.classList.remove("is-leaving"), Wi.fromTo(t, {
-                        opacity: 0
-                    }, {
-                        opacity: 1,
-                        duration: .9
-                    })
+                    // t.style.display = "block", t.classList.remove("is-leaving"), Wi.fromTo(t, {
+                    //     opacity: 0
+                    // }, {
+                    //     opacity: 1,
+                    //     duration: .9
+                    // })
                 },
                 hidePage(t) {
                     t.classList.add("is-leaving"), Wi.to(t, {
