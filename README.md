@@ -6,7 +6,7 @@ Software Developer/Computer Science student at Cornell University. Interested in
 
 Find me at: \
 rh564@cornell.edu \
-[ryanisho.com](ryanisho.com)
+[ryanisho.com](https://www.ryanisho.com)
 
 ## 📈 My GitHub Stats:
 
