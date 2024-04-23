@@ -2,7 +2,11 @@
 
 ## 🌱 About Me:
 
-I'm a software developer, passionate about coding and creating innovative solutions. I'm constantly learning new technologies and experimenting with them to develop cool projects.
+Software Developer/Computer Science student at Cornell University. Interested in fullstack application design, generative-ai, computer-vision algorithms, and cloud computing. Constantly experimenting with new techologies and developing projects to learn more. 
+
+Find me at: \
+rh564@cornell.edu \
+[ryanisho.com](ryanisho.com)
 
 ## 📈 My GitHub Stats:
 
