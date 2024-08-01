@@ -1,8 +1,8 @@
-# Hi there, I'm Ryan 👋
+# Hi there 👋
 
 ## 🌱 About Me:
 
-Software Developer/Computer Science student at Cornell University. Interested in fullstack application design, generative-ai, computer-vision algorithms, and cloud computing. Constantly experimenting with new techologies and developing projects to learn more. 
+CS @ Cornell University. Interested in fullstack application design, generative-ai, and cloud computing. Constantly experimenting with new techologies and developing projects to learn more. 
 
 Find me at: \
 rh564@cornell.edu \
