@@ -2,9 +2,9 @@
 
 ## 🌱 About Me:
 
-CS @ Cornell University. Interested in fullstack application design, generative-ai, and cloud computing. Constantly experimenting with new techologies and developing projects to learn more. 
+CS @ Cornell University. Interested in fullstack development & cloud computing. 
 
-Find me at: \
+Reachable at: \
 rh564@cornell.edu \
 [ryanisho.com](https://www.ryanisho.com)
 
