@@ -27,6 +27,7 @@ export default function Gallery() {
       "bunt.jpeg",
       "landscapenyc.jpg",
       "morrison.JPG",
+      "sf.jpg",
     ];
 
     const images = imageFiles.map((filename, index) => ({

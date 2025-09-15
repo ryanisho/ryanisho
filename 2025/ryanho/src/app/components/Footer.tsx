@@ -6,11 +6,10 @@ export default function Footer() {
 
   return (
     <footer className="flex flex-col md:flex-row md:justify-between md:items-center text-base space-y-4 md:space-y-0 pt-10 sm:pt-0 md:pt-0">
-      {/* Desktop text */}
       <div className="hidden md:block">Currently: Ithaca</div>
       <div className="flex flex-col md:flex-row md:space-x-7 space-y-4 md:space-y-0">
         <a
-          href="/resume.pdf"
+          href="/files/ryan_ho_resume.pdf"
           target="_blank"
           rel="noopener noreferrer"
           className="hover:text-black"
@@ -34,7 +33,6 @@ export default function Footer() {
           Instagram
         </a>
 
-        {/* Mobile text */}
         <div className="pt-4 block md:hidden">It&apos;s {time} for Ryan</div>
       </div>
     </footer>

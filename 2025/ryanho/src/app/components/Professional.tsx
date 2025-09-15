@@ -30,15 +30,15 @@ export default function Professional() {
         title: "Present",
         items: [
           { name: "Z-Fellows", url: "https://www.zfellows.com/" },
-          { name: "BOOM", url: "#" },
+          { name: "BOOM", url: "img/boom.jpg" },
           { name: "Big Red Hacks", url: "#" },
         ],
       },
       {
         title: "Visit",
         items: [
-          { name: "New York City", url: "#" },
-          { name: "San Francisco", url: "#" },
+          { name: "New York City", url: "img/nyc.jpg" },
+          { name: "San Francisco", url: "img/sf.jpg" },
         ],
       },
     ],
