@@ -8,7 +8,7 @@ export default function About() {
     <>
       <div className="sm:w-sm w-xs pt-10 sm:pt-0 sm:pl-20">
         <p
-          className={`text-base mb-4 leading-tight ${
+          className={`text-base mb-4 leading-tight transition-colors duration-300 ease-in-out ${
             showDatadog || showColor ? "text-[#adadad]" : ""
           }`}
         >
@@ -28,7 +28,7 @@ export default function About() {
           involved with as an open source engineer.
         </p>
         <p
-          className={`text-base mb-4 leading-tight ${
+          className={`text-base mb-4 leading-tight transition-colors duration-300 ease-in-out ${
             showDatadog || showColor ? "text-[#adadad]" : ""
           }`}
         >
@@ -36,7 +36,7 @@ export default function About() {
           photography, spikeball + Formula One.
         </p>
         <p
-          className={`text-base mb-4 leading-tight ${
+          className={`text-base mb-4 leading-tight transition-colors duration-300 ease-in-out ${
             showDatadog || showColor ? "text-[#adadad]" : ""
           }`}
         >
@@ -44,7 +44,7 @@ export default function About() {
           rotated between NYC and NJ in the last few years.
         </p>
         <p
-          className={`text-base mb-4 leading-tight ${
+          className={`text-base mb-4 leading-tight transition-colors duration-300 ease-in-out ${
             showDatadog || showColor ? "text-[#adadad]" : ""
           }`}
         >
