@@ -41,5 +41,11 @@ html {
 }
 
 .main-container {
-  padding: 96px 96px 62px;
+  padding: 48px 48px 31px;
+}
+
+@media (min-width: 640px) {
+  .main-container {
+    padding: 96px 96px 62px;
+  }
 }
