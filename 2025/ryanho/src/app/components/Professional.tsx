@@ -79,7 +79,7 @@ export default function Professional() {
         </p>
       </div>
 
-      <div className="sm:w-sm w-xs pt-5 sm:pt-0 sm:pl-16 sm:flex-1">
+      <div className="sm:w-sm w-xs pt-5 sm:pt-0 sm:pl-16 sm:flex-1 pb-10 sm:pb-0">
         <div className="grid grid-cols-3 h-full max-w-lg">
           <div className="space-y-4">
             <div className="text-md leading-tight space-y-2 opacity-80">

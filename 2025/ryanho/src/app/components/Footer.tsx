@@ -1,8 +1,14 @@
 export default function Footer() {
+  const time = new Date().toLocaleTimeString([], {
+    hour: "numeric",
+    minute: "2-digit",
+  });
+
   return (
-    <footer className="flex justify-between items-center text-base">
-      <div>Currently: Ithaca</div>
-      <div className="flex space-x-7">
+    <footer className="flex flex-col md:flex-row md:justify-between md:items-center text-base space-y-4 md:space-y-0 pt-10 sm:pt-0 md:pt-0">
+      {/* Desktop text */}
+      <div className="hidden md:block">Currently: Ithaca</div>
+      <div className="flex flex-col md:flex-row md:space-x-7 space-y-4 md:space-y-0">
         <a
           href="/resume.pdf"
           target="_blank"
@@ -27,6 +33,9 @@ export default function Footer() {
         >
           Instagram
         </a>
+
+        {/* Mobile text */}
+        <div className="pt-4 block md:hidden">It&apos;s {time} for Ryan</div>
       </div>
     </footer>
   );
