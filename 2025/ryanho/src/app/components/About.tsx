@@ -7,7 +7,11 @@ export default function About() {
   return (
     <>
       <div className="sm:w-sm w-xs pt-10 sm:pt-0 sm:pl-20">
-        <p className="text-base mb-4 leading-tight">
+        <p
+          className={`text-base mb-4 leading-tight ${
+            showDatadog || showColor ? "text-[#adadad]" : ""
+          }`}
+        >
           Ryan is building at{" "}
           <span
             className={`text-black hover:cursor-pointer ${
@@ -23,15 +27,27 @@ export default function About() {
           . He previously worked at Cisco, which he is still very actively
           involved with as an open source engineer.
         </p>
-        <p className="mb-4 leading-tight">
+        <p
+          className={`text-base mb-4 leading-tight ${
+            showDatadog || showColor ? "text-[#adadad]" : ""
+          }`}
+        >
           In his spare time, he studies the web, tries out music, and enjoys
           photography, spikeball + Formula One.
         </p>
-        <p className="mb-4 leading-tight">
+        <p
+          className={`text-base mb-4 leading-tight ${
+            showDatadog || showColor ? "text-[#adadad]" : ""
+          }`}
+        >
           He is an engineer & Cornell graduate. He grew up in New Jersey and has
           rotated between NYC and NJ in the last few years.
         </p>
-        <p className="mb-4 leading-tight">
+        <p
+          className={`text-base mb-4 leading-tight ${
+            showDatadog || showColor ? "text-[#adadad]" : ""
+          }`}
+        >
           His favorite color is{" "}
           <span
             className={`text-black hover:cursor-pointer ${
@@ -44,8 +60,8 @@ export default function About() {
             }}
           >
             #D22B2B
-          </span>{" "}
-          and his favorite author is TBD .
+          </span>
+          .
         </p>
       </div>
 
