@@ -20,16 +20,6 @@
   );
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: var(
-      --token-d5b73f8b-d3c4-4907-a72f-f1bb5d3c6a5f,
-      rgb(105, 105, 105)
-    );
-  }
-}
-
 body {
   background: var(--background);
   color: var(--foreground);
